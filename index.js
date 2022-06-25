@@ -40,6 +40,8 @@ app.post('/upload', checkAuth, upload.single('image'), (req, res) => {
   });
 });
 
+app.get('/tags', PostController.getLastTegs);
+
 app.get('/posts', PostController.getAll);
 app.get('/posts/tags', PostController.getLastTegs);
 app.get('/posts/:id', PostController.getOne);
